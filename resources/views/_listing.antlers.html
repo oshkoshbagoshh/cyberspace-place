@@ -1,0 +1,15 @@
+<section class="border border-green-400 mt-12">
+
+    <section class="border border-green-400 mt-12">
+        {{ slot }}
+        {{ collection:blog :limit="limit" }}
+
+        <h2 class="p-5">Recent Blog Posts</h2>
+        {{ collection:blog limit="5" }}
+        <a href="{{ url }}"
+           class="flex items-center justify-between p-5 border-t border-green-400 text-green-400 hover:text-green-900 hover:bg-green-400">
+            <span>{{ title }}</span>
+            <span class="text-green-900 text-sm">{{ date }}</span>
+        </a>
+        {{ /collection:blog }}
+    </section>
